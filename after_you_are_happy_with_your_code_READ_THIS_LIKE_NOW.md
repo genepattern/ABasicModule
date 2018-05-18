@@ -66,7 +66,7 @@ https://github.com/genepattern/common_module_code/blob/master/module.lsid.regist
   - Make sure there is a line which lists the Docker image:tag to be used, for example: “job.docker.image=genepattern/docker-python36:0.4”
 10. Open in a text editor and modify the prerelease.version file. Make sure this matches the intended NEXT minor of your module. E.g., if you want your module to be released as version X.Y.Z (meaning that your module is currently X.Y-1.Z), then set prerelease.number=Y
 11. Edit README.md to add some details about the module
-12. Open in a text editor and modify the release.version file. Make sure this matches the intended NEXT major version of your module. E.g., if you want your module to be released as version X.Y.Z meaning that your module is currently X-1.Y.Z), then set prerelease.number=X
+12. Open in a text editor and modify the release.version file. Make sure this matches the intended NEXT major version of your module. E.g., if you want your module to be released as version X.Y.Z meaning that your module is currently X-1.Y.Z), then set build.number=X
   - Note: This value matters when you do a release of a module. Most of the time you will be doing a prerelease of the module, hence only the minor version of the module will change. Here are a couple examples to hammer down this issue:
     + Example 1: We want to do a prerelease of a module
     the three key values before the prerelease are:
@@ -118,7 +118,7 @@ git push --set-upstream origin develop
 17. Install your module from repository (you may need to be a GP Admin for this)
   If you are doing a release (Note: the very first time you go through this, you probably want to do a release of the module to have version 1.x out there):
   - Choose the prod repository
-  If you are doping a pre-release:
+  If you are doing a pre-release:
   - Copy the zip file from the beta repository to the prod repository **LINK TO THIS REPOSITORY IS MISSING FROM THIS DOC**
 
   **In general you want to do pre-releases, test using the Jenkins project "Single_Module_Test"**
